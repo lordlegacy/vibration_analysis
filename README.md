@@ -1,33 +1,43 @@
 # vibration_analysis
+# Electric Motor Vibrations Dataset
 
-Predictive Maintenance with Machine Learning
-Welcome to the Predictive Maintenance with Machine Learning repository! This project aims to revolutionize industrial maintenance by employing advanced machine learning techniques to predict and prevent equipment failures before they occur.
+This repository contains data provided by vibrations sensor that can be used in designing and testing ML algorithms for general classification problems or more specific one such as predictive maintenance.
 
-Overview
-Predictive maintenance is a proactive approach to equipment management, optimizing maintenance schedules, minimizing downtime, and ultimately increasing operational efficiency. In this repository, you will find a comprehensive set of tools and models designed to analyze historical equipment data and predict potential failures.
+Dataset is organized as follows:
 
-Features
-Data Preprocessing: Explore our data preprocessing scripts to understand how we clean and prepare historical data for predictive modeling.
+No.	File name	Category	Description	Data length in [data samples]
+1	"01 - m1_half_shaft_speed_no_mechanical_load"	Normal operation	m1 test asynchronous motor running without mechanical load set at half of maximum shaft revolution speed	107336
+2	"02 - m1_load_0.5Nm_half_speed"	Normal operation with load	m1 test asynchronous motor running with mechanical load at torque value of 0.5 Nm and set at half of maximum shaft revolution speed	102909
+3	"03 - m1_mechanically_umbalanced_half_speed"	Mechanical fault (shaft misalignment)	m1 test asynchronous motor running without mechanical load and set at half of maximum shaft revolution speed in presence of mechanical imbalance at shaft	100514
+4	"04 - m1_mechanically_umbalanced_half_speed"	Mechanical fault (shaft misalignment)	m1 test asynchronous motor running without mechanical load and set at half of maximum shaft revolution speed in presence of mechanical imbalance at shaft	142799
+5	"05 - m1_mechanically_umbalanced_load_0.5Nm_half_speed"	Mechanical fault (shaft misalignment) with load	m1 test asynchronous motor running with mechanical load at torque value of 0.5 Nm and set at half of maximum shaft revolution speed in presence of mechanical imbalance at shaft	151093
+6	"06 - m1_electrically_50_ohm_fault_half_speed"	Electrical fault	m1 test asynchronous motor running without mechanical load and set at half of maximum shaft revolution speed in presence of fault simulated with a 50 Ohm resistor	104293
+7	"07 - m1_electrically_100_ohm_fault_half_speed"	Electrical fault	m1 test asynchronous motor running without mechanical load and set at half of maximum shaft revolution speed in presence of fault simulated with a 100 Ohm resistor	101854
+8	"08 - m1_electrically_150_ohm_fault_half_speed"	Electrical fault	m1 test asynchronous motor running without mechanical load and set at half of maximum shaft revolution speed in presence of fault simulated with a 150 Ohm resistor	107174
+9	"09 - m1_electrically_50_ohm_fault_load_0.5Nm_half_speed"	Electrical fault with load	m1 test asynchronous motor running with mechanical load at torque value of 0.5 Nm and set at half of maximum shaft revolution speed in presence of fault simulated with a 50 Ohm resistor	102782
+10	"10 - m1_electrically_100_ohm_fault_load_0.5Nm_half_speed"	Electrical fault with load	m1 test asynchronous motor running with mechanical load at torque value of 0.5 Nm and set at half of maximum shaft revolution speed in presence of fault simulated with a 100 Ohm resistor	103376
+11	"11 - m1_mechanically_imbalanced_electrically_50_ohm_fault_half_speed"	Mechanical fault (shaft misalignment) and Electrical fault	m1 test asynchronous motor running without mechanical simulation load not power supplied, shaft misalignment and set at half of maximum shaft revolution speed in presence of fault simulated with a 50 Ohm resistor	150375
+12	"12 - m1_mechanically_imbalanced_electrically_100_ohm_fault_half_speed"	Mechanical fault (shaft misalignment) and Electrical fault	m1 test asynchronous motor running without mechanical simulation load not power supplied, shaft misalignment and set at half of maximum shaft revolution speed in presence of fault simulated with a 100 Ohm resistor	105232
+13	"13 - m1_mechanically_imbalanced_electrically_150_ohm_fault_half_speed"	Mechanical fault (shaft misalignment) and Electrical fault	m1 test asynchronous motor running without mechanical simulation load not power supplied, shaft misalignment and set at half of maximum shaft revolution speed in presence of fault simulated with a 150 Ohm resistor	101613
+14	"14 - m1_mechanically_imbalanced_electrically_50_ohm_fault_load_0.5Nm_half_speed"	Mechanical fault (shaft misalignment) and Electrical fault	m1 test asynchronous motor running with mechanical load at torque value of 0.5 Nm, shaft misalignment and set at half of maximum shaft revolution speed in presence of fault simulated with a 50 Ohm resistor	150463
+15	"15 - m1_with_m2_mechanicaly_imbalanced_on_background_half_speed" 	Normal operation and High noise present	m1 test asynchronous motor running without mechanical load set at half of maximum shaft revolution speed, second motor running with vibrations placed in proximity	102111
+16	"16 - m1_mechanically_imbalanced_with_m2_normal_on_background_half_speed"	Mechanical fault (shaft misalignment) and Noise present	m1 test asynchronous motor running with mechanical simulation load not power supplied, shaft misalignment, set at half of maximum shaft revolution speed, second motor running placed in proximity	153466
+17	"17 - m1_mechanically_imbalanced_with_m2_mechanicaly_imbalanced_on_background_half_speed"	Mechanical fault (shaft misalignment) and High noise present	m1 test asynchronous motor running with mechanical simulation load not power supplied, shaft misalignment, set at half of maximum shaft revolution speed, second motor running with vibrations placed in proximity	155047
+18	"18 - m1_load_0.5Nm_m2_mechanically_imbalanced_on_background_half_speed"	Normal operation with load and High noise present	m1 test asynchronous motor running with mechanical load at torque value of 0.5 Nm, set at half of maximum shaft revolution speed, second motor running with vibrations placed in proximity	104468
+19	"19 - m1_mechanically_imbalanced_load_0.5Nm_m2_mechanically_imbalanced_on_background_half_speed"	Mechanical fault (shaft misalignment) with load and High noise present	m1 test asynchronous motor running with mechanical load at torque value of 0.5 Nm, shaft misalignment, set at half of maximum shaft revolution speed, second motor running with vibrations placed in proximity	151017
+20	"20 - m1_electrically_50_ohm_fault_m2_imbalanced_on_background_half_speed"	Electrical fault and High noise present	m1 test asynchronous motor running without load and set at half of maximum shaft revolution speed in presence of fault simulated with a 50 Ohm resistor, second motor running with vibrations placed in proximity	111743
+21	"21 - m1_electrically_50_ohm_fault_load_0.5Nm_m2_mechanically_imbalanced_half_speed"	Electrical fault with load and High noise present	m1 test asynchronous motor running with mechanical load at torque value of 0.5 Nm, and set at half of maximum shaft revolution speed in presence of fault simulated with a 50 Ohm resistor, second motor running with vibrations placed in proximity	107380
+22	"22 - m1_electrically_100_ohm_fault_m2_mechanically_imbalanced_half_speed"	Electrical fault and High noise present	m1 test asynchronous motor running without load and set at half of maximum shaft revolution speed in presence of fault simulated with a 100 Ohm resistor, second motor running with vibrations placed in proximity	104434
+23	"23 - m1_electrically_100_ohm_fault_load_0.5Nm_m2_mechanically_imbalanced_half_speed"	Electrical fault with load and High noise present	m1 test asynchronous motor running with mechanical load at torque value of 0.5 Nm, and set at half of maximum shaft revolution speed in presence of fault simulated with a 100 Ohm resistor, second motor running with vibrations placed in proximity	108170
+24	"24 - m1_electrically_150_ohm_fault_m2_imbalanced_on_background_half_speed"	Electrical fault and High noise present	m1 test asynchronous motor running without load and set at half of maximum shaft revolution speed in presence of fault simulated with a 150 Ohm resistor, second motor running with vibrations placed in proximity	102918
+25	"25 - m1_mechanically_imbalanced_electrically_50_ohm_fault_m2_imbalanced_on_background_half_speed"	Mechanical fault (shaft misalignment), Electrical fault and High noise present	m1 test asynchronous motor running with mechanical simulation load not power supplied, shaft misalignment, speed in presence of electrical fault simulated with a 50 Ohm resistor, set at half of maximum shaft revolution speed, second motor running with vibrations placed in proximity	102953
+26	"26 - m1_mechanically_umbalanced_electrically_50_ohm_fault_load_0.5Nm_m2_umbalanced_on_background_half_speed"	Mechanical fault (shaft misalignment), with load, Electrical fault and High noise present	m1 test asynchronous motor running with mechanical simulation load at 0.5 Nm, shaft misalignment, speed in presence of electrical fault simulated with a 50 Ohm resistor, set at half of maximum shaft revolution speed, second motor running with vibrations placed in proximity	146328
+27	"27 - m1_mechanically_imbalanced_electrically_100_ohm_fault_m2_imbalanced_on_background_half_speed"	Mechanical fault (shaft misalignment),  Electrical fault and High noise present	m1 test asynchronous motor running with mechanical simulation load not power supplied, shaft misalignment, speed in presence of electrical fault simulated with a 100 Ohm resistor, set at half of maximum shaft revolution speed, second motor running with vibrations placed in proximity	110081
+28	"28 - m1_mechanically_imbalanced_electrically_100_ohm_fault_load_0.5Nm_m2_imbalanced_on_background_half_speed"	Mechanical fault (shaft misalignment), with load, Electrical fault and High noise present	m1 test asynchronous motor running with mechanical simulation load at 0.5 Nm, shaft misalignment, speed in presence of electrical fault simulated with a 100 Ohm resistor, set at half of maximum shaft revolution speed, second motor running with vibrations placed in proximity	136361
+29	"29 - m1_mechanically_imbalanced_electrically_150_ohm_fault_m2_imbalanced_on_background_half_speed"	Mechanical fault (shaft misalignment), Electrical fault and High noise present	m1 test asynchronous motor running with mechanical simulation load not power supplied, shaft misalignment, speed in presence of electrical fault simulated with a 150 Ohm resistor, set at half of maximum shaft revolution speed, second motor running with vibrations placed in proximity	102432
+30	"30 - m1_mechanically_imbalanced_electrically_150_ohm_fault_m2_imbalanced_on_background_rotated_half_speed"	Mechanical fault (shaft misalignment), Electrical fault and High noise present	m1 test asynchronous motor running with mechanical simulation load not power supplied, shaft misalignment, speed in presence of electrical fault simulated with a 100 Ohm resistor, set at half of maximum shaft revolution speed, second motor running with vibrations at half speed placed in proximity	101405
 
-Model Training: Discover our machine learning models, implemented in Python using popular libraries such as scikit-learn and TensorFlow, designed to predict equipment failures based on historical patterns.
 
-Real-Time Monitoring: Learn how to implement real-time monitoring of equipment health, enabling early detection of abnormalities and improving response time.
-
-Evaluation Metrics: Evaluate the performance of our predictive maintenance models using industry-standard metrics, ensuring robust and reliable predictions.
-
-Getting Started
-Installation: Clone this repository and follow the installation instructions in the Installation Guide.
-
-Data Preparation: Use the provided Jupyter notebooks to preprocess and explore the historical equipment data.
-
-Model Training: Train your predictive maintenance models using the scripts in the models directory.
-
-Real-Time Implementation: Explore the real-time directory to implement real-time monitoring in your industrial setup.
-
-Evaluate Performance: Utilize the evaluation scripts in the metrics directory to assess the performance of your models.
-
-Contributing
-We welcome contributions from the community to enhance and expand the capabilities of this predictive maintenance system. Feel free to open issues, submit pull requests, or participate in discussions.
-
-License
-This project is licensed under the MIT License, allowing you to freely use, modify, and distribute the code for both commercial and non-commercial purposes.
+Note:
+  m1 is the tested motor
+  m2 is a second motor for obtaining a more complex testing environment (eg. supplemental noise source).
